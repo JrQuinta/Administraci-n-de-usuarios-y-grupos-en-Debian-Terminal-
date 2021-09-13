@@ -1,0 +1,33 @@
+Es importante conocer los archivos en la cual se guarda la información de usuario y grupo:
+
+ /etc/passwd: información (nombre, directorio home, . . . ) del usuario. Este archivo
+es de texto tipo ASCII, se crea al momento de la instalación con el usuario root y las
+momento de la instalación.
+
+ /etc/group: información sobre los grupos de usuarios. Este archivo guarda la
+relación de los grupos a los que pertenecen los usuarios del sistema, contiene una
+línea para cada usuario con tres o cuatro campos por usuario. 
+
+1.- Crear un grupo llamado casa.
+
+Los grupos permiten asignar permisos de ficheros y directorios a muchos usuarios de
+una vez. A un grupo pueden pertenecer varios usuarios y un usuario puede pertenecer
+a varios grupos.Un usuario tiene asignado un grupo principal o por defecto.
+
+# Para crear grupos en Linux, utilizamos el comando addgroup ó groupadd.
+
+addgroup casa
+
+2.- Dentro del grupo casa crear 2 usuarios, uno con el nombre de su papá o mamá y el otro usuario seria su nombre.
+
+#Para la creación de usuarios, emplearemos el comando adduser ó useradd.
+
+adduser rolando
+
+adduser jhonny
+
+3.- Luego cambiar el nombre del grupo casa a Familia.
+
+# para cambiarle el nombre a un grupo, empleamos la opción –n
+
+groupmod -n familia casa
